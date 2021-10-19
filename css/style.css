@@ -1,3 +1,5 @@
+@import url('./fonts.css');
+
 /* Reset CSS */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -28,6 +30,7 @@ a {
 }
 body {
 	line-height: 1;
+    font-size: 18px;
 }
 ol, ul {
 	list-style: none;
@@ -57,7 +60,7 @@ table {
     justify-content: space-between;
     height: 124px;
     padding-left: 40px;
-    padding-right: 11px;
+    padding-right: 41px;
 }
 .header__logo {
     height: 32.8px;
@@ -65,23 +68,26 @@ table {
 .header__menu {
     align-items: center;
     display: flex;
-    font-size: 20px;
+    font-family: 'Barlow';
 }
 .header__menu li:nth-child(1) {
-    margin-right: 48px;
+    margin-right: 49px;
 }
 .header__menu li:nth-child(2) {
-    margin-right: 47px;
+    margin-right: 46px;
 }
 .header__menu li:nth-child(3) {
-    margin-right: 48px;
+    margin-right: 47px;
 }
 .header__menu li:last-child {
     background-color: #fff;
     border-radius: 50px;
     cursor: pointer;
-    margin-right: 30px;
-    padding: 18px 38.6px;
+    font-family: 'Fraunces';
+    font-size: 16px;
+    letter-spacing: -0.8px;
+    padding: 20px 31px;
+    text-transform: uppercase;
     transition: all 0.3s ease-in-out;
 }
 .header__menu li:last-child:hover {
