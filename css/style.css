@@ -52,6 +52,8 @@ table {
     background-image: url('../images/desktop/image-header.jpg');
     background-position: center bottom;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
 }
 .header {
@@ -101,4 +103,22 @@ table {
 }
 .header__menu li:last-child a:hover {
     color: #fff;
+}
+.banner__cta {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 75px
+}
+.banner__cta__text {
+    color: #fff;
+    font-family: 'Fraunces';
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+}
+.banner__cta__arrow {
+    margin-top: 100px;
 }
