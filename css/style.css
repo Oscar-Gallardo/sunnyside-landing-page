@@ -1,6 +1,14 @@
 @import url('./fonts.css');
 
 /* Reset CSS */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -99,9 +107,10 @@ table {
     color: #fff;
 }
 .header__menu li:last-child a {
-    color: #000;
+    color: hsl(212, 27%, 19%);
+    transition: all 0.3s ease-in-out;
 }
-.header__menu li:last-child a:hover {
+.header__menu li:last-child:hover a {
     color: #fff;
 }
 .banner__cta {
@@ -111,7 +120,7 @@ table {
     flex-grow: 1;
     margin-top: 75px
 }
-.banner__cta__text {
+.banner__cta__heading {
     color: #fff;
     font-family: 'Fraunces';
     font-size: 56px;
@@ -121,4 +130,52 @@ table {
 }
 .banner__cta__arrow {
     margin-top: 100px;
+}
+.feature {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 600px;
+}
+.feature__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+.feature__content__heading {
+    color: hsl(212, 27%, 19%);
+    font-family: 'Fraunces';
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 0.6px;
+    line-height: 1.2;
+    padding: 0 165px;
+    padding-bottom: 33px
+}
+.feature__content__text {
+    color: hsl(232, 10%, 55%);
+    font-family: 'Barlow';
+    line-height: 1.7;
+    width: 112%;
+    padding: 0 165px;
+    padding-bottom: 40px;
+}
+.feature__content__link {
+    color: hsl(212, 27%, 19%);
+    font-family: 'Fraunces';
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 0 165px 0 175px;
+}
+.feature__image {
+    height: 100%;
+}
+.feature__image img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 }
