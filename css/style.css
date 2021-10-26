@@ -107,7 +107,7 @@ table {
     color: #fff;
 }
 .header__menu li:last-child a {
-    color: hsl(212, 27%, 19%);
+    color: #23303e;
     transition: all 0.3s ease-in-out;
 }
 .header__menu li:last-child:hover a {
@@ -249,4 +249,68 @@ table {
 .service__content__text {
     font-family: 'Barlow';
     line-height: 1.5;
+}
+.testimonials {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+.testimonials__title {
+    color: #a7abae;
+    font-family: 'Fraunces';
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 6.5px;
+    text-transform: uppercase;
+    padding-bottom: 84px;
+}
+.testimonials__wrapper {
+    align-items: center;
+    display: flex;
+    padding: 0 138px;
+}
+.testimonial {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.testimonial:nth-child(1) {
+    padding-right: 20px;
+    width: 71%;
+}
+.testimonial:nth-child(2) {
+    padding-right: 22px;
+    width: 69%;
+}
+.testimonial:nth-child(3) {
+    padding-right: 20px;
+    width: 70%;
+}
+.testimonial__image {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    margin-bottom: 58px;
+}
+.testimonial__comment {
+    color: #5a636c;
+    font-family: 'Barlow';
+    line-height: 1.7;
+    padding-bottom: 72px;
+}
+.testimonial__name {
+    color: #23303e;
+    font-family: 'Fraunces';
+    font-weight: 900;
+    padding-bottom: 16px;
+
+}
+.testimonial__role {
+    color: #a7abae;
+    font-family: 'Barlow';
+    font-size: 14px;
 }
