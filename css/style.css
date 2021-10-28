@@ -314,3 +314,12 @@ table {
     font-family: 'Barlow';
     font-size: 14px;
 }
+.gallery {
+    align-items: center;
+    display: flex;
+}
+.gallery__image {
+    width: 25%;
+    height: 50vh;
+    object-fit: cover;
+}
