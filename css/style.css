@@ -171,7 +171,7 @@ table {
     font-size: 16px;
     font-weight: 900;
     letter-spacing: 0.6px;
-    padding-left: 10px;
+    margin-left: 10px;
     position: relative;
     text-transform: uppercase;
     width: max-content;
@@ -182,7 +182,7 @@ table {
     content: '';
     display: block;
     height: 10px;
-    left: 1px;
+    left: -4px;
     opacity: 0.3;
     position: absolute;
     transition: opacity 0.2s;
@@ -357,7 +357,9 @@ footer {
     color: #fff;
 }
 .socials__menu {
+    align-items: center;
     padding-top: 95px;
+    display: flex;
 }
 .socials__menu__item {
     margin-left: 15px;
