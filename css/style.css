@@ -56,6 +56,9 @@ table {
 	border-spacing: 0;
 }
 /* End of Reset CSS */
+
+/*----- Banner Section -----*/
+
 .banner {
     background-image: url('../images/desktop/image-header.jpg');
     background-position: center bottom;
@@ -64,6 +67,26 @@ table {
     flex-direction: column;
     height: 100vh;
 }
+.banner__cta {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 75px
+}
+.banner__cta__heading {
+    color: #fff;
+    font-family: 'Fraunces';
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+}
+.banner__cta__arrow {
+    margin-top: 100px;
+}
+
+/*----- Header Section -----*/
 .header {
     align-items: center;
     display: flex;
@@ -113,24 +136,9 @@ table {
 .header__menu li:last-child:hover a {
     color: #fff;
 }
-.banner__cta {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    margin-top: 75px
-}
-.banner__cta__heading {
-    color: #fff;
-    font-family: 'Fraunces';
-    font-size: 56px;
-    font-weight: 900;
-    letter-spacing: 9px;
-    text-transform: uppercase;
-}
-.banner__cta__arrow {
-    margin-top: 100px;
-}
+
+/*----- Feature Section -----*/
+
 .feature {
     align-items: center;
     display: flex;
@@ -207,6 +215,9 @@ table {
     object-fit: cover;
     width: 100%;
 }
+
+/*----- Services Section -----*/
+
 .services {
     align-items: center;
     display: flex;
@@ -250,6 +261,9 @@ table {
     font-family: 'Barlow';
     line-height: 1.5;
 }
+
+/*----- Testimonial Section -----*/
+
 .testimonials {
     align-items: center;
     display: flex;
@@ -314,6 +328,9 @@ table {
     font-family: 'Barlow';
     font-size: 14px;
 }
+
+/*----- Gallery Section -----*/
+
 .gallery {
     align-items: center;
     display: flex;
@@ -323,6 +340,9 @@ table {
     height: 50vh;
     object-fit: cover;
 }
+
+/*----- Footer Section -----*/
+
 footer {
     align-items: center;
     background-color: #90d4c5;
@@ -371,3 +391,5 @@ footer {
 .socials__menu__item:hover path {
     fill: #fff;
 }
+
+/* Media queries */
