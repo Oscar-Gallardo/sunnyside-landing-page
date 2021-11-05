@@ -86,6 +86,25 @@ table {
     margin-top: 100px;
 }
 
+/* Media queries */
+@media only screen and (max-width: 450px) {
+    .banner {
+        height: 81vh;
+    }
+    .banner__cta {
+        margin-top: 56px;
+    }
+    .banner__cta__heading {
+        font-size: 40px;
+        letter-spacing: 7px;
+        line-height: 1.2;
+        text-align: center;
+    }
+    .banner__cta__arrow {
+        margin-top: 51px;
+    }
+}
+
 /*----- Header Section -----*/
 .header {
     align-items: center;
@@ -135,6 +154,32 @@ table {
 }
 .header__menu li:last-child:hover a {
     color: #fff;
+}
+
+/* Media queries */
+@media only screen and (max-width: 450px) {
+    .header {
+        height: 88px;
+        padding-left: 24px;
+    }
+    .header__menu {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        display: none;
+    }
+    .header__menu li:nth-child(1) {
+        margin-right: 0;
+    }
+    .header__menu li:nth-child(2) {
+        margin-right: 0;
+    }
+    .header__menu li:nth-child(3) {
+        margin-right: 0;
+    }
+    .header__logo {
+        height: 24px;
+    }
 }
 
 /*----- Feature Section -----*/
@@ -391,5 +436,3 @@ footer {
 .socials__menu__item:hover path {
     fill: #fff;
 }
-
-/* Media queries */
