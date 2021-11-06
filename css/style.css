@@ -487,8 +487,7 @@ table {
 @media only screen and (max-width: 375px) {
     .gallery {
         display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
     .gallery__image {
         width: 100%;
