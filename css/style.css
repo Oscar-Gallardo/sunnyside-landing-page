@@ -309,9 +309,11 @@ table {
 }
 .service.graphic-design {
     background-image: url('../images/desktop/image-graphic-design.jpg');
+    background-position: center center;
 }
 .service.photography {
     background-image: url('../images/desktop/image-photography.jpg');
+    background-position: center center;
 }
 .service__content {
     align-items: center;
@@ -336,6 +338,32 @@ table {
 .service__content__text {
     font-family: 'Barlow';
     line-height: 1.5;
+}
+
+/* Media queries */
+@media only screen and (max-width: 375px) {
+    .services {
+        flex-direction: column;
+        height: 1200px;
+    }
+    .service {
+        width: 100%;
+    }
+    .graphic-design .service__content {
+        padding: 0 0 60px 0;
+    }
+    .photography .service__content {
+        padding: 0 0 60px 0;
+    }
+    .service__content__heading {
+        font-size: 28px;
+        padding-bottom: 30px;
+    }
+    .service__content__text {
+        font-size: 16px;
+        line-height: 1.7;
+        padding: 0 20px;
+    }
 }
 
 /*----- Testimonial Section -----*/
