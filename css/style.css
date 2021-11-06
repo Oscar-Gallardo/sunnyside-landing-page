@@ -87,7 +87,7 @@ table {
 }
 
 /* Media queries */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 375px) {
     .banner {
         height: 81vh;
     }
@@ -157,7 +157,7 @@ table {
 }
 
 /* Media queries */
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 375px) {
     .header {
         height: 88px;
         padding-left: 24px;
@@ -259,6 +259,37 @@ table {
     height: 100%;
     object-fit: cover;
     width: 100%;
+}
+
+/* Media queries */
+@media only screen and (max-width: 375px) {
+    .feature {
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+    .feature__content {
+        align-items: center;
+        padding: 10px;
+        text-align: center;
+        width: auto;
+    }
+    .feature__content__heading {
+        font-size: 34px;
+        letter-spacing: -0.7px;
+        padding-bottom: 23px;
+        padding-top: 46px;
+    }
+    .feature__content__text {
+        padding: 0 10px 38px 10px;
+        width: auto;
+    }
+    .feature__image {
+        width: 100%;
+    }
+    .feature__content__link {
+        margin-bottom: 59px;
+        margin-left: 0;
+    }
 }
 
 /*----- Services Section -----*/
