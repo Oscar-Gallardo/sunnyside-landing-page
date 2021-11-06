@@ -546,3 +546,12 @@ footer {
 .socials__menu__item:hover path {
     fill: #fff;
 }
+
+@media only screen and (max-width: 375px) {
+    .footer__menu__item:nth-child(1) {
+        padding-right: 52px;
+    }
+    .footer__menu__item:nth-child(3) {
+        padding-left: 52px;
+    }
+}
