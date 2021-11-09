@@ -90,6 +90,7 @@ table {
 @media only screen and (max-width: 375px) {
     .banner {
         height: 81vh;
+        padding: 0 24px;
     }
     .banner__cta {
         margin-top: 56px;
@@ -106,32 +107,33 @@ table {
 }
 
 /*----- Header Section -----*/
-.header {
+.navigation {
     align-items: center;
     display: flex;
     justify-content: space-between;
     height: 124px;
     padding-left: 40px;
     padding-right: 41px;
+    position: relative;
 }
-.header__logo {
+.navigation__logo {
     height: 32.8px;
 }
-.header__menu {
+.navigation__menu {
     align-items: center;
     display: flex;
     font-family: 'Barlow';
 }
-.header__menu li:nth-child(1) {
+.navigation__menu li:nth-child(1) {
     margin-right: 49px;
 }
-.header__menu li:nth-child(2) {
+.navigation__menu li:nth-child(2) {
     margin-right: 46px;
 }
-.header__menu li:nth-child(3) {
+.navigation__menu li:nth-child(3) {
     margin-right: 47px;
 }
-.header__menu li:last-child {
+.navigation__menu li:last-child {
     background-color: #fff;
     border-radius: 50px;
     cursor: pointer;
@@ -142,17 +144,17 @@ table {
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
 }
-.header__menu li:last-child:hover {
+.navigation__menu li:last-child:hover {
     background-color: rgba(255,255,255,0.4);
 }
-.header__menu li a {
+.navigation__menu li a {
     color: #fff;
 }
-.header__menu li:last-child a {
+.navigation__menu li:last-child a {
     color: #23303e;
     transition: all 0.3s ease-in-out;
 }
-.header__menu li:last-child:hover a {
+.navigation__menu li:last-child:hover a {
     color: #fff;
 }
 
@@ -163,33 +165,31 @@ table {
 	margin: 1% 0 1% 1.6%;
 }
 .col:first-of-type {
-  margin-left: 0;
+    margin-left: 0;
 }
-.container{
-  width: 100%;
-  max-width: 940px;
-  margin: 0 auto;
-  position: relative;
-  text-align: center;
-  display: none;
-  visibility: hidden;
+.navigation__mobile__icon{
+    display: none;
+    max-width: 940px;
+    position: relative;
+    text-align: center;
+    visibility: hidden;
 }
 .row .three{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     color: #ecf0f1;
     text-align: center;
 }
 .hamburger .line{
-    width: 30px;
-    height: 2px;
     background-color: #ecf0f1;
     display: block;
+    height: 2px;
     margin: 6px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    width: 30px;
 }
 .hamburger:hover{
     cursor: pointer;
@@ -199,74 +199,118 @@ table {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+
+/* Javascript event handeling classes */
+
 #hamburger.is-active{
     animation: scale 0.6s forwards;
 }
 @keyframes scale{
     0%, 100%{
-      -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-      -o-transform: scale(1);
-      transform: scale(1);
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
     }
 
     50%{
-      -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-      -o-transform: scale(0);
-      transform: scale(0);
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
     }
 }
 #hamburger.is-active .line:nth-child(1),
 #hamburger.is-active .line:nth-child(2),
 #hamburger.is-active .line:nth-child(3){
+    transition-delay: 0.2s;
     -webkit-transition-delay: 0.2s;
     -o-transition-delay: 0.2s;
-    transition-delay: 0.2s;
 }
 #hamburger.is-active .line:nth-child(2){
     opacity: 0;
 }
 #hamburger.is-active .line:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
     -webkit-transform: translateY(8px) rotate(45deg);
     -ms-transform: translateY(8px) rotate(45deg);
     -o-transform: translateY(8px) rotate(45deg);
-    transform: translateY(8px) rotate(45deg);
 }
 #hamburger.is-active .line:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
     -webkit-transform: translateY(-8px) rotate(-45deg);
     -ms-transform: translateY(-8px) rotate(-45deg);
     -o-transform: translateY(-8px) rotate(-45deg);
-    transform: translateY(-8px) rotate(-45deg);
+}
+
+.navigation__menu.is-active {
+    display: flex;
+    visibility: visible;
+    position: absolute;
+    width: 100%;
+    top: 106px;
+    padding: 40px 0;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px -5px rgba(71, 71, 71, 0.64);
+    -webkit-box-shadow: 0px 2px 10px -5px rgba(71, 71, 71, 0.64);
+    -moz-box-shadow: 0px 2px 10px -5px rgba(71, 71, 71, 0.64);
+}
+.navigation__menu.is-active::before {
+    position: absolute;
+    content: "";
+    top: -24px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 25px 25px;
+    border-color: transparent transparent #ffffff transparent;
 }
 
 /* Media queries */
 @media only screen and (max-width: 375px) {
-    .header {
+    .navigation {
         height: 88px;
-        padding-left: 24px;
+        padding-left: 0;
+        padding-right: 0;
     }
-    .header__menu {
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        display: none;
-    }
-    .header__menu li:nth-child(1) {
-        margin-right: 0;
-    }
-    .header__menu li:nth-child(2) {
-        margin-right: 0;
-    }
-    .header__menu li:nth-child(3) {
-        margin-right: 0;
-    }
-    .header__logo {
+    .navigation__logo {
         height: 24px;
     }
-    .container {
-        visibility: visible;
+    .navigation__menu {
+        align-items: center;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        visibility: hidden;
+    }
+    .navigation__menu li:nth-child(1) {
+        margin-right: 0;
+        margin-bottom: 38px;
+    }
+    .navigation__menu li:nth-child(2) {
+        margin-right: 0;
+        margin-bottom: 38px;
+    }
+    .navigation__menu li:nth-child(3) {
+        margin-right: 0;
+        margin-bottom: 38px;
+    }
+    .navigation__menu li:last-child {
+        background-color: #fad400;
+    }
+    .navigation__menu li:last-child:hover {
+        background-color: #fad400;
+    }
+    .navigation__menu li a {
+        color: #818498;
+    }
+    .navigation__menu li:last-child:hover a {
+        color: #23303e;
+    }
+    .navigation__mobile__icon {
         display: initial;
+        visibility: visible;
     }
 }
 
